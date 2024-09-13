@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   const result = await streamText({
     model: openai("gpt-4-turbo"),
     prompt:
-      "im gonna send you a csv file content and i need you to analyze it in terms of financial statements and literacy." +
+      "I'm gonna send you a csv file content. You should analyze the financial statement and give suggestion whether to buy or sell stocks. If there is no any financial statement data you should output: 'The provided file does not contain information about financial statements of the company.' " +
       prompt,
   });
 
